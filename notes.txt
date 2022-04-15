@@ -1,0 +1,20 @@
+======    Pomodoro Timer    ======
+
+
+Input work time in minutes.
+
+Input break time in minutes.
+
+Start work timer.
+
+Once time reaches 0, notify the user via a desktop notification.
+
+Reset work timer.
+
+Start break timer.
+
+Once break timer reaches 0, notify the user via a desktop notification.
+
+Start work timer.
+
+Reset break timer.
