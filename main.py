@@ -2,7 +2,6 @@
 import time
 
 
-
 def work_timer():
     timer_sec = input("Enter a time in seconds: ")
     timer_sec = int(timer_sec)
@@ -15,7 +14,6 @@ def work_timer():
     end = time.time()
 
     print(end - start)
-
 
 
 
