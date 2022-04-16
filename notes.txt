@@ -1,20 +1,28 @@
 ======    Pomodoro Timer    ======
 
-
+# done
 Input work time in minutes.
 
+# done
 Input break time in minutes.
 
-Start work timer.
+# here !
+Start work timer and find a way to display live preview of the timer.
+
 
 Once time reaches 0, notify the user via a desktop notification.
 
+
 Reset work timer.
+
 
 Start break timer.
 
+
 Once break timer reaches 0, notify the user via a desktop notification.
 
+
 Start work timer.
+
 
 Reset break timer.

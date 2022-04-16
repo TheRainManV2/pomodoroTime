@@ -2,23 +2,44 @@
 import time
 
 
-def work_timer():
-    timer_sec = input("Enter a time in seconds: ")
-    timer_sec = int(timer_sec)
+# get desired work time from the user
+while True:
+    try:
+        workTime_min = int(input("Enter work time in minutes: "))
+    except ValueError as v:
+        print(v)
+    else:
+        workTime_min = workTime_min*60
+        break
 
-    start = time.time()
-    
-    for x in range(0,timer_sec):
+
+# get desired break time from the user
+while True:
+    try:
+        breakTime_min = int(input("Enter break time in minutes: "))
+    except ValueError as v:
+        print(v)
+    else:
+        breakTime_min = breakTime_min*60
+        break 
+
+
+def work_timer(work_time):
+    for x in range(0, work_time):
         time.sleep(0.9996)
 
-    end = time.time()
 
-    print(end - start)
+def break_timer(break_time):
+    for x in range(0, break_time):
+        time.sleep(0.9996)
 
-
-
-def break_timer():
-    pass
 
 def reset(timer):
     pass
+
+
+def main():
+    pass
+
+if __name__ == "__main__":
+    main()
