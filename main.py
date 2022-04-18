@@ -2,7 +2,7 @@
 import time
 
 
-# make function to get time input from users
+# Get time input from users
 def get_timer_min(workORbreak):
     while True:
         try:
@@ -15,18 +15,23 @@ def get_timer_min(workORbreak):
             break
 
 
-def work_timer(work_time):
-    while work_time:
-        mins, secs = divmod(work_time, 60)
+def start_timer(timeMode):
+    while timeMode:
+        mins, secs = divmod(timeMode, 60)
         timer = f"{mins:02d}:{secs:02d}"
         print(timer, end="\r")
         time.sleep(0.9996)
-        work_time -= 1
+        timeMode -= 1
 
 
-def break_timer(break_time):
-    for x in range(0, break_time):
-        time.sleep(0.9996)
+# Add desktop notification
+def notify(mode):
+    if mode == 'break':
+        print("It's time to take a break")
+    elif mode == 'work':
+        print("It's time to work")
+    else:
+        print('enter a valid mode (work/break)')
 
 
 def reset(timer):
@@ -36,7 +41,10 @@ def reset(timer):
 def main():
     work_time = get_timer_min("work")
     break_time = get_timer_min("break")
-    work_timer(work_time)
+    start_timer(work_time)
+    notify('break')
+    start_timer(break_time)
+    notify("work")
 
 if __name__ == "__main__":
     main()
